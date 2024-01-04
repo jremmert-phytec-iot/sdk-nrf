@@ -21,6 +21,8 @@ manifest:
     - name: ncs
       url-base: https://github.com/nrfconnect
     # Third-party repository sources:
+    - name: jremmert-phytec-iot
+      url-base: git@github.com:jremmert-phytec-iot
     - name: zephyrproject
       url-base: https://github.com/zephyrproject-rtos
     - name: throwtheswitch
@@ -60,8 +62,9 @@ manifest:
     # https://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/zephyr/introduction/index.html
     # https://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/zephyr/guides/modules.html
     - name: zephyr
-      repo-path: sdk-zephyr
-      revision: v3.4.99-ncs1-1
+      remote: jremmert-phytec-iot
+      repo-path: zephyr
+      revision: v3.4.99-ncs1-1_lps28dfw_patch
       import:
         # In addition to the zephyr repository itself, NCS also
         # imports the contents of zephyr/west.yml at the above
